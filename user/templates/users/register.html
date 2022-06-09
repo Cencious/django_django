@@ -1,0 +1,23 @@
+{% block content %}
+<div class="content section">
+  <form method="post">
+      {% csrf_token %} 
+      <fieldset class="form-group">
+          <!-- gives details to form-->
+        <legend class="boarder-bottom mb-4">Join today </legend>
+        {{ form.as_p }}
+       
+      </fieldset>
+      <div class="form-group">
+        <button class="btn btn-outline-info">Sign up</button>
+      </div>
+  </form>
+  <div class="boarder-top pt-3">
+    <small class="text-muted">
+        Already have an account? <a class="ml-2" href="#">Sign in</a>
+
+    </small>
+  </div>
+</div>  
+
+{% endblock %}
